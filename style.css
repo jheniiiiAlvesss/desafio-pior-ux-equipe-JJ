@@ -1,0 +1,108 @@
+body {
+  background-color: #ff00ff; /* Rosa choque extremamente cansativo */
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  color: #00ff00; /* Verde limão sobre fundo rosa = contraste péssimo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #ffff00; /* Fundo amarelo */
+  padding: 30px;
+  border: 10px dashed #0000ff;
+  text-align: center;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 16px;
+  color: #ffffff; /* Texto branco no fundo amarelo */
+  background: #ffff00;
+}
+
+.campo {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 11px;
+  color: #cccccc; /* Cinza claro ilegível */
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 5px solid red;
+}
+
+/* Feedback Enganoso */
+.feedback.sucesso-falso {
+  background-color: #28a745;
+  color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.erro-escondido {
+  color: #ffff00; /* Mesma cor do fundo para ninguém enxergar */
+  font-size: 8px;
+}
+
+.dica-confusa {
+  color: #888;
+  font-size: 10px;
+}
+
+/* Inversão dos Botões */
+.acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-perigo-falso {
+  background-color: #28a745; /* Verde de sucesso para enganar */
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-avancar-escondido {
+  background-color: #e0e0e0; /* Apagado */
+  color: #a0a0a0;
+  border: none;
+  font-size: 9px; /* Minúsculo */
+  padding: 2px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}

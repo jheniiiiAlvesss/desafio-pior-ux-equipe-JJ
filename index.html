@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Super Simples e Seguro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Insira seus dados para continuar</h1>
+    
+    <div id="mensagem-feedback" class="feedback hidden"></div>
+
+    <form id="pior-form">
+      <div class="campo">
+        <label for="nome">Nome Completo (Apenas MAIÚSCULAS):</label>
+        <input type="text" id="nome" placeholder="ex: JOAO SILVA" autocomplete="off">
+        <small id="aviso-nome" class="erro-escondido">O tempo está acabando!</small>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="Sua senha secreta">
+        <small class="dica-confusa">A senha deve ter 1 emoji de fruta, 1 número primo e o nome da sua mãe.</small>
+      </div>
+
+      <div class="acoes">
+        <!-- O botão Cancelar parece o botão Principal (VERDE) -->
+        <button type="button" id="btn-cancelar" class="btn-perigo-falso">CANCELAR E LIMPAR TUDO</button>
+        
+        <!-- O botão Avançar está apagado e escondido -->
+        <button type="submit" id="btn-avancar" class="btn-avancar-escondido">avançar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="tela-sucesso" class="modal hidden">
+    <div class="modal-content">
+      <h2>🎉 PARABÉNS!</h2>
+      <p>Você sobreviveu e conseguiu concluir o formulário da pior interface do mundo!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
