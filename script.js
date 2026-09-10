@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const mensagemFeedback = document.getElementById("mensagem-feedback");
   const telaSucesso = document.getElementById("tela-sucesso");
 
-  // Botão enganoso que limpa os campos
+  // Botão enganoso verde
   btnCancelar.addEventListener("click", () => {
     alert("Ops! Você clicou no botão de Limpar Tudo!");
     form.reset();
     mensagemFeedback.classList.add("hidden");
   });
 
-  // Validação ao digitar o nome (Feedback enganoso)
+  // Feedback enganoso ao digitar nome
   inputNome.addEventListener("input", () => {
     if (inputNome.value.length > 0) {
       mensagemFeedback.textContent = "DADOS SALVOS COM SUCESSO!";
@@ -24,27 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Envio do formulário
+  // Envio do formulário (Botão Avançar)
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const nomeValido = inputNome.value === inputNome.value.toUpperCase() && inputNome.value.trim() !== "";
     
-    // Lista de números primos simples e emojis de frutas
-    const temNumeroPrimo = /[2357]/.test(inputSenha.value);
-    const temFruta = /[\u{1F347}-\u{1F353}]/u.test(inputSenha.value) || inputSenha.value.includes("🍎") || inputSenha.value.includes("🍌");
-
     if (!nomeValido) {
-      alert("ERRO: O nome deve estar completamente em MAIÚSCULAS!");
+      alert("ERRO: O nome precisa estar 100% em MAIÚSCULAS!");
       return;
     }
 
-    if (!temNumeroPrimo || !temFruta) {
-      alert("ERRO NA SENHA: A senha precisa conter pelo menos um emoji de fruta (ex: 🍎) e um número primo (ex: 7)!");
-      return;
-    }
-
-    // Exibe o modal de parabéns
+    // Exibe a tela de parabéns se passar no nome
     telaSucesso.style.display = "flex";
     telaSucesso.classList.remove("hidden");
   });
