@@ -86,15 +86,20 @@ input {
   cursor: pointer;
 }
 
+/* Esconde elementos com a classe hidden */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
+/* Modal de sucesso (começa escondido por padrão) */
 .modal {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
   justify-content: center;
   align-items: center;
 }
